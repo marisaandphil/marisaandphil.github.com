@@ -1,69 +1,324 @@
 <!DOCTYPE html>
+
 <html>
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="marisaandphil.github.com : marisaandphil.github.com" />
+<head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+<title>The Wedding of Marisa Alcaraz and Phillip Freeman</title>
 
-    <title>marisaandphil.github.com</title>
-  </head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-  <body>
+<style>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/marisaandphil">View on GitHub</a>
+html, body {
+	margin: 0;
+	height: 100%;
+}
 
-          <h1 id="project_title">marisaandphil.github.com</h1>
-          <h2 id="project_tagline">marisaandphil.github.com</h2>
+body {
+	font-family: 'Georgia', 'Times New Roman', Serif;
+	background: url('bg.jpg') no-repeat no-repeat top center;
+	color: #303030;
+}
 
-        </header>
-    </div>
+a, a:visited, a:active {
+	color: #5e080b;
+	text-decoration: none;
+}
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+a:hover {
+	color: #a82428;
+}
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+h1, h2, h3 {
+	color: #5d120e;
+}
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+#wrapper {
+	width: 1024px;    
+	margin: 0 auto;
+}
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+#header {            
+	text-align: center;
+}
 
-<h3>Designer Templates</h3>
+	#header h1 {
+		font-size: 3em;
+		font-variant: small-caps;
+	}
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+#links {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
-<h3>Rather Drive Stick?</h3>
+	#links li {
+		margin: 0;
+		margin-left: 10px;
+		margin-right: 10px;
+		display: inline;
+		padding: 0;
+	}
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+#columns {
+}
 
-<h3>Authors and Contributors</h3>
+#left {
+	float: left;
+	width: 470px;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5em;
+}
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+.save-the-date {
+	font-size: 2em;
+}
 
-<h3>Support or Contact</h3>
+.caps {
+	font-variant: small-caps;
+}
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+#middle {
+	position: relative;
+	float: left;
+	width: 1px;
+	height: 600px;
+	border-left: 1px dashed #808080; 
+}
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+#right {
+	position: relative;
+	float: left;
+	width: 470px;
+	padding: 20px;
+}
 
-    
+hr {
+	width: 50%;
+	height: 1px;
+	border: 0;
+	border-top: 1px dashed #808080; 
+}
 
-  </body>
+.clear {
+	clear:both;
+}
+
+#footer {
+	text-align: center;
+	font-size: 0.75em;
+	color: #A0A0A0;
+	text-transform:uppercase;    
+	margin: 20px auto;
+}
+
+.section {
+	position: absolute;
+}
+</style>
+
+<script type="text/javascript">
+
+	$(function() {
+		$('[data-section]').each(function() {
+			var id = $(this).attr('data-section');
+			$(this).click(function() {
+				$('.section').fadeOut("slow");
+				$('#' + id).fadeIn("slow");
+			});
+		});
+	});
+
+</script>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="header">
+
+		<h1><span style="font-size: 0.5em; color: #404040;">The Wedding of</span><br/>Marisa Alcaraz <span style="font-size: 0.5em; color: #404040;">&</span> Phil Freeman</h1>
+
+		<hr />
+
+		<ul id="links">
+			<li><a href="#" data-section="welcome">Welcome</a></li>
+			<li><a href="#" data-section="events">Events</a></li>
+			<li><a href="#" data-section="accomodation">Accommodations</a></li>
+			<li><a href="#" data-section="travel">Travel</a></li>
+			<li><a href="#" data-section="location">Location</a></li>
+			<li><a href="#" data-section="registries">Our Registries</a></li>
+		</ul>
+
+		<hr />
+	</div>
+
+	<div id="columns">
+
+		<div id="left">
+			<p><em>Can't wait to see you here on our big day!</em></p>
+
+			<p class="caps"><strong><span class="save-the-date">Save the Date</span></strong><br/>We're getting married!</p>
+
+			<p><strong><em>Saturday, July 20th, 2013</em></strong></p>
+
+			<p><em>Pembroke College<br/>Cambridge, United Kingdom</em></p>
+
+		</div>
+
+		<div id="middle"></div>
+
+		<div id="right">
+			<div id="welcome" class="section">
+				<h1>Welcome</h1>
+
+				<p>Welcome to our wedding website. We are very excited to formally announce our engagement and share with you the plans for our big day!</p>
+
+				<p>We're getting married in the City where we met: <strong>Cambridge</strong>. It is one of our favorite places in the world and we couldn't imagine getting married anywhere else.</p>
+
+				<p>We will be wed at <strong>Pembroke College</strong>, on <strong>July 20, 2013</strong>.</p>
+
+				<p>For those of you able to attend, we have done our best to provide some helpful information on this website, including event details, accomodation options, and travel information.</p>
+
+				<p>It is our hope that many of you have the opportunity to plan an extended stay and explore the UK and other areas in Europe. 
+				If you have any questions or need assistance with planning your trip, please don't hesitate to contact us.</p>
+	
+				<p>Love,</p>
+
+				<p><em>Marisa & Phil</em></p>
+			</div>
+
+			<div id="events" style="display: none;" class="section">
+				<h1>Events</h1>
+
+				<h2>Welcome Event</h2>
+
+				<blockquote>
+				<h3>Friday, July 19, 2013</h3>
+
+				<p>Noon - 2:00PM</p>
+
+				<p>Punting on the river Cam. See the backs of the colleges and enjoy refreshments.</p>
+	
+				<p>Meet by the river off of Mill Ln.</p> 
+				</blockquote>
+	
+				<h2>Ceremony and Reception</h2>
+	
+				<blockquote>
+				<h3>Saturday, July 20, 2013</h3>
+	
+				<p>3:30PM - 11:30PM</p>
+	
+				<p>The entire wedding will take place at Pembroke College. The ceremony begins at 3:30PM, followed by cocktails, and the reception.</p>
+				</blockquote>
+			</div>
+
+			<div id="accomodation" style="display: none;" class="section">
+				<h1>Accomodation</h1>
+
+				<h2>Pembroke College</h2>
+
+				<blockquote>
+				<p>There are two rooms at the college that have been reserved for guests. One room has four beds, the other six. There is a shared bathroom in the hall. If you are interested in rooming here please contact the bride and groom.</p>
+				</blockquote>
+	
+				<h2>Regent Hotel</h2>
+	
+				<blockquote>
+				<p>Centrally located the Hotel is an easy stroll to all the city's attractions, and overlooks the famous Parkers Piece. It is about a 10min walk to the wedding location. Standard rooms are about 100 pounds per night.</p>
+	
+				<p><strong>Tel</strong>: (+44) (0) 1223351470</p>
+
+				<p><strong>Web</strong>: <a href="http://www.regenthotel.co.uk/" target="_blank">regenthotel.co.uk</a></p>
+	
+				</blockquote>
+
+				<h2>Hotel du Vin</h2>
+	
+				<blockquote>
+				<p>A luxury hotel just down the street from the wedding location.</p>
+	
+				<p><strong>Tel</strong>: (+44) (0) 223227330</p>
+
+				<p><strong>Web</strong>: <a href="http://www.hotelduvin.com/hotels/cambridge/cambridge.aspx" target="_blank">hotelduvin.com</a></p>
+	
+				</blockquote>
+			</div>
+
+			<div id="travel" style="display: none;" class="section">
+				<h1>Travel</h1>
+
+				<h2>By Plane</h2>
+
+				<blockquote>
+				<p>For those of you travelling from the States, we are currently looking into a group discount. In the meantime, a great webite for travel deals from the States to the UK is <a href="http://www.skyscanner.com/" target="_blank">skyscanner.com</a></p>
+				</blockquote>
+	
+				<h2>By Train</h2>
+	
+				<blockquote>
+				<p>The UK has an extensive rail system. Trains depart from London to Cambridge nearly every hour. There are also excellent connections from Scotland & the North via Peterborough, and regional services from Birmingham & the Midlands, East Anglia & the Northwest.You can check train times and make reservations at the <a href="http://www.nationalrail.co.uk/" target="_blank">National Rail website</a>.</p>
+				</blockquote>
+
+				<h2>By Car</h2>
+	
+				<blockquote>
+				<p>From the South & from London, Cambridge is a short trip up the M11 motorway. From the north, the A1 and M1 link to the A14 dual carriageway straight to the city, and from the east and west, the A14 again takes you to Cambridge.</p>
+	
+				<p>The closest car park to the wedding location is the <a href="http://www.cambridge.gov.uk/ccm/content/transport-and-streets/car-parks/grand-arcade-car-park.en" target="_blank">Grand Arcade</a>.</p>
+	
+				</blockquote>
+			</div>
+
+			<div id="location" style="display: none;" class="section">
+				<h1>Location</h1>
+
+				<p>Cambridge is a beautiful City and there is plenty to see and do. Some of our favorite activities and places to visit are listed below. For more information about the City, we suggest you visit te <a href="http://www.visitcambridge.org/" target="_blank">Visit Cambridge</a> website.</p>
+
+				<h2>Punting</h2><blockquote>
+
+				<p>An absolute must in Cambridge, you will see the famous Cambridge College "Backs" while strolling down the river on a traditional punt.</p></blockquote>
+
+				<h2>Tour of the Colleges</h2>
+
+				<blockquote><p>There are 31 colleges in Cambridge, each is worth a visit, but if you are low on time then Kings, Trinity, and St. John's are the most popular.</p></blockquote>
+
+				<h2>Visit a Local Pub</h2>
+
+				<blockquote><p>Our favorites are the Mill, the Green Man, and the Green Dragon, also popular are the Anchor and the Eagle.</p></blockquote>
+
+				<h2>Fitzwilliam Museum</h2>
+
+				<blockquote><p>The most famous museum in Cambridge offers over half a million works of art for visitors to view.</p></blockquote>
+
+				<h2>Botanical Gardens</h2>
+
+				<blockquote><p>This garden is 40-acres and displays over 8,000 plant species.</p></blockquote>
+
+				<h2>Afternoon Tea</h2>
+
+				<blockquote><p>A traditional afternoon tea consists of a pot of tea, scones, sandwiches, and cakes. Our favorite places for tea are Brown's and the Orchard.</p></blockquote>
+
+				<h2>Walk to Grantchester</h2>
+
+				<blockquote><p>A trip to nearby Grantchester is a great activity since the walk there is only about 20 min and takes you along some beatiful scenery.</p></blockquote>
+			</div>
+
+			<div id="registries" style="display: none;" class="section">
+				<h1>Registries</h1>
+
+				<p>We are currently in the process of completeing our registries. Please check back soon. </p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</body>
 </html>
