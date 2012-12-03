@@ -125,9 +125,10 @@ hr {
 	$(function() {
 		$('[data-section]').each(function() {
 			var id = $(this).attr('data-section');
-			$(this).click(function() {
+			$(this).click(function(e) {
 				$('.section').fadeOut("slow");
 				$('#' + id).fadeIn("slow");
+				e.preventDefault();
 			});
 		});
 	});
