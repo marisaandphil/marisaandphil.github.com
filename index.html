@@ -67,14 +67,6 @@ h1, h2, h3 {
 #columns {
 }
 
-#left {
-	float: left;
-	width: 470px;
-	padding: 20px;
-	text-align: center;
-	font-size: 1.5em;
-}
-
 .save-the-date {
 	font-size: 2em;
 }
@@ -83,23 +75,8 @@ h1, h2, h3 {
 	font-variant: small-caps;
 }
 
-#middle {
-	position: relative;
-	float: left;
-	width: 1px;
-	height: 600px;
-	border-left: 1px dashed #808080; 
-}
-
-#right {
-	position: relative;
-	float: left;
-	width: 470px;
-	padding: 20px;
-}
-
 hr {
-	width: 50%;
+	width: 100%;
 	height: 1px;
 	border: 0;
 	border-top: 1px dashed #808080; 
@@ -120,104 +97,6 @@ hr {
 .section {
 	position: absolute;
 }
-
-#photos {
-	list-style-type: none;	
-}
-
-#photos li {
-	list-style-type: none;	
-	display: inline;
-	margin: 5px 0 0 0;
-    border: 1px;
-}
-
-#photos li img {
-	border: 1px solid #404040;
-}
-
-#glassPane {
-    display: none;
-    opacity: 0.8;
-    background-color: #9A8080;
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999;
-}
-
-#overlayWrapper {
-    display: none;
-    position: absolute;
-    z-index: 1000;
-    top: 100px;
-	text-align: center;
-    left: 0;
-    right: 0;
-}
-
-#overlay {
-    position: relative;
-    width: 500px;
-	margin: 0 auto;
-}
-
-.overlayImagePlaceholder {
-    display: block;
-	margin: 0;
-    padding: 0;
-    width: 453px;
-    height: 453px;
-}
-
-#overlayImage {
-    display: block;
-	margin: 0;
-    padding: 0;
-    border: 1px solid #000;
-    width: 453px;
-    height: 453px;
-}
-
-.overlayBorder {
-	padding: 20px 20px 120px 20px;
-    background-color: #ffffff;
-    border: 1px solid #000;
-    box-shadow: 6px 6px 20px #404040;
-}
-    
-#rotate-3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    -moz-transform:rotate(-3deg);
-    -webkit-transform:rotate(-3deg);
-    -o-transform:rotate(-3deg);
-    -ms-transform:rotate(-3deg);
-}
-
-#rotate0 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-}
-
-#rotate3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    -moz-transform:rotate(3deg);
-    -webkit-transform:rotate(3deg);
-    -o-transform:rotate(3deg);
-    -ms-transform:rotate(3deg);
-}
 </style>
 
 <script type="text/javascript">
@@ -228,26 +107,6 @@ hr {
 			$(this).click(function(e) {
 				$('.section').fadeOut("fast");
 				$('#' + id).fadeIn("fast");
-				e.preventDefault();
-			});
-		});
-        
-        function fadeOut(e) {
-			$('#glassPane').fadeOut('fast');
-			$('#overlayWrapper').fadeOut('fast');
-			e.preventDefault();
-        }
-        
-		$('#glassPane').click(fadeOut);
-		$('#overlay').click(fadeOut);
-		$('.overlayBorder').click(fadeOut);
-
-		$('[data-enlarge]').each(function() {
-			var uri = $(this).attr('data-enlarge');
-			$(this).click(function(e) {
-				$('#overlayImage').attr('src', uri);
-                $('#glassPane').fadeIn('fast');
-				$('#overlayWrapper').fadeIn('fast');
 				e.preventDefault();
 			});
 		});
@@ -265,6 +124,9 @@ hr {
 
 		<h1><span style="font-size: 0.5em; color: #404040;">The Wedding of</span><br/>Marisa Alcaraz <span style="font-size: 0.5em; color: #404040;">&</span> Phil Freeman</h1>
 
+		<p><strong><em>Saturday, July 20th, 2013</em></strong>
+        <br /><em>Pembroke College, Cambridge, United Kingdom</em></p>
+		
 		<hr />
 
 		<ul id="links">
@@ -273,7 +135,6 @@ hr {
 			<li><a href="#" data-section="accomodation">Accommodations</a></li>
 			<li><a href="#" data-section="travel">Travel</a></li>
 			<li><a href="#" data-section="location">Location</a></li>
-			<li><a href="#" data-section="photos">Photos</a></li>
 			<li><a href="#" data-section="registries">Our Registries</a></li>
 			<li><a href="#" data-section="rsvp">RSVP</a></li>
 		</ul>
@@ -281,278 +142,223 @@ hr {
 		<hr />
 	</div>
 
-	<div id="columns">
+	<div id="welcome" class="section">
+		<h1>Welcome</h1>
 
-		<div id="left">
-			<p><em>Can't wait to see you here on our big day!</em></p>
+		<p>Welcome to our wedding website. We are very excited to formally announce our engagement and share with you the plans for our big day!</p>
 
-			<p class="caps"><strong><span class="save-the-date">Save the Date</span></strong><br/>We're getting married!</p>
+		<p>We're getting married in the City where we met: <strong>Cambridge</strong>. It is one of our favorite places in the world and we couldn't imagine getting married anywhere else.</p>
 
-			<p><strong><em>Saturday, July 20th, 2013</em></strong></p>
+		<p>We will be wed at <strong>Pembroke College</strong>, on <strong>July 20, 2013</strong>.</p>
 
-			<p><em>Pembroke College<br/>Cambridge, United Kingdom</em></p>
+		<p>For those of you able to attend, we have done our best to provide some helpful information on this website, including event details, accomodation options, and travel information.</p>
 
-		</div>
-
-		<div id="middle"></div>
-
-		<div id="right">
-			<div id="welcome" class="section">
-				<h1>Welcome</h1>
-
-				<p>Welcome to our wedding website. We are very excited to formally announce our engagement and share with you the plans for our big day!</p>
-
-				<p>We're getting married in the City where we met: <strong>Cambridge</strong>. It is one of our favorite places in the world and we couldn't imagine getting married anywhere else.</p>
-
-				<p>We will be wed at <strong>Pembroke College</strong>, on <strong>July 20, 2013</strong>.</p>
-
-				<p>For those of you able to attend, we have done our best to provide some helpful information on this website, including event details, accomodation options, and travel information.</p>
-
-				<p>It is our hope that many of you have the opportunity to plan an extended stay and explore the UK and other areas in Europe. 
-				If you have any questions or need assistance with planning your trip, please don't hesitate to contact us.</p>
+		<p>It is our hope that many of you have the opportunity to plan an extended stay and explore the UK and other areas in Europe. 
+		If you have any questions or need assistance with planning your trip, please don't hesitate to contact us.</p>
 	
-				<p>Love,</p>
+		<p>Love,</p>
 
-				<p><em>Marisa & Phil</em></p>
-			</div>
-
-			<div id="events" style="display: none;" class="section">
-				<h1>Events</h1>
-
-				<h2>London Sightseeing</h2>
-
-				<blockquote>
-				<h3>Wednesday, July 17, 2013</h3>
-
-				<p>10:00AM -</p>
-				
-				<p>We will be walking around London and visiting some of our favourite sights including Big Ben, Trafalgar Square, Picadilly Circus, Buckingham Palace and Covent Garden.
-				</p>
-				</blockquote>
-
-				<h2>Cambridge Pub Crawl</h2>
-				
-				<blockquote>
-				<h3>Thursday, July 18, 2013</h3>
-
-				<p>7:00PM -</p>
-				
-				<p>We will be visiting some of our favourite pubs in Cambridge. For those of you would like to get started early, we have posted a list of our favourite pubs on Google Maps <a href="http://maps.google.com/maps/ms?ie=UTF&msa=0&msid=216864241354524736059.0004c3641f9997e72e9b6" tagrt="_blank">here</a>.</p>
-				</blockquote>
-
-				<h2>Punting</h2>
-
-				<blockquote>
-				<h3>Friday, July 19, 2013</h3>
-
-				<p>Noon - 2:00PM</p>
-
-				<p>Punting on the river Cam. See the backs of the colleges and enjoy refreshments.</p>
-	
-				<p>Meet by the river off of Mill Ln.</p> 
-				</blockquote>
-	
-				<h2>Wedding Ceremony and Reception</h2>
-	
-				<blockquote>
-				<h3>Saturday, July 20, 2013</h3>
-	
-				<p>3:30PM - 11:30PM</p>
-	
-				<p>The entire wedding will take place at Pembroke College. The ceremony begins at 3:30PM, followed by cocktails, and the reception.</p>
-				</blockquote>
-			</div>
-
-			<div id="accomodation" style="display: none;" class="section">
-				<h1>Accomodation</h1>
-
-				<h2>Pembroke College</h2>
-
-				<blockquote>
-				<p>There are two rooms at the college that have been reserved for guests. One room has four beds, the other six. There is a shared bathroom in the hall. If you are interested in rooming here please contact the bride and groom.</p>
-				</blockquote>
-	
-				<h2>Regent Hotel</h2>
-	
-				<blockquote>
-				<p>Centrally located the Hotel is an easy stroll to all the city's attractions, and overlooks the famous Parkers Piece. It is about a 10min walk to the wedding location. Standard rooms are about 100 pounds per night.</p>
-	
-				<p><strong>Tel</strong>: (+44) (0) 1223351470</p>
-
-				<p><strong>Web</strong>: <a href="http://www.regenthotel.co.uk/" target="_blank">regenthotel.co.uk</a></p>
-	
-				</blockquote>
-
-				<h2>Hotel du Vin</h2>
-	
-				<blockquote>
-				<p>A luxury hotel just down the street from the wedding location.</p>
-	
-				<p><strong>Tel</strong>: (+44) (0) 223227330</p>
-
-				<p><strong>Web</strong>: <a href="http://www.hotelduvin.com/hotels/cambridge/cambridge.aspx" target="_blank">hotelduvin.com</a></p>
-	
-				</blockquote>
-			</div>
-
-			<div id="travel" style="display: none;" class="section">
-				<h1>Travel</h1>
-
-				<h2>By Plane</h2>
-
-				<blockquote>
-				<p>For those of you travelling from the States, we are currently looking into a group discount. In the meantime, a great webite for travel deals from the States to the UK is <a href="http://www.skyscanner.com/" target="_blank">skyscanner.com</a></p>
-				</blockquote>
-	
-				<h2>By Train</h2>
-	
-				<blockquote>
-				<p>The UK has an extensive rail system. Trains depart from London to Cambridge nearly every hour. There are also excellent connections from Scotland & the North via Peterborough, and regional services from Birmingham & the Midlands, East Anglia & the Northwest.You can check train times and make reservations at the <a href="http://www.nationalrail.co.uk/" target="_blank">National Rail website</a>.</p>
-				</blockquote>
-
-				<h2>By Car</h2>
-	
-				<blockquote>
-				<p>From the South & from London, Cambridge is a short trip up the M11 motorway. From the north, the A1 and M1 link to the A14 dual carriageway straight to the city, and from the east and west, the A14 again takes you to Cambridge.</p>
-	
-				<p>The closest car park to the wedding location is the <a href="http://www.cambridge.gov.uk/ccm/content/transport-and-streets/car-parks/grand-arcade-car-park.en" target="_blank">Grand Arcade</a>.</p>
-	
-				</blockquote>
-			</div>
-
-			<div id="location" style="display: none;" class="section">
-				<h1>Location</h1>
-
-				<p>Cambridge is a beautiful City and there is plenty to see and do. Some of our favorite activities and places to visit are listed below. For more information about the City, we suggest you visit te <a href="http://www.visitcambridge.org/" target="_blank">Visit Cambridge</a> website.</p>
-
-				<h2>Punting</h2><blockquote>
-
-				<p>An absolute must in Cambridge, you will see the famous Cambridge College "Backs" while strolling down the river on a traditional punt.</p></blockquote>
-
-				<h2>Tour of the Colleges</h2>
-
-				<blockquote><p>There are 31 colleges in Cambridge, each is worth a visit, but if you are low on time then Kings, Trinity, and St. John's are the most popular.</p></blockquote>
-
-				<h2>Visit a Local Pub</h2>
-
-				<blockquote><p>Our favorites are the Mill, the Green Man, and the Green Dragon, also popular are the Anchor and the Eagle.</p></blockquote>
-
-				<h2>Fitzwilliam Museum</h2>
-
-				<blockquote><p>The most famous museum in Cambridge offers over half a million works of art for visitors to view.</p></blockquote>
-
-				<h2>Botanical Gardens</h2>
-
-				<blockquote><p>This garden is 40-acres and displays over 8,000 plant species.</p></blockquote>
-
-				<h2>Afternoon Tea</h2>
-
-				<blockquote><p>A traditional afternoon tea consists of a pot of tea, scones, sandwiches, and cakes. Our favorite places for tea are Brown's and the Orchard.</p></blockquote>
-
-				<h2>Walk to Grantchester</h2>
-
-				<blockquote><p>A trip to nearby Grantchester is a great activity since the walk there is only about 20 min and takes you along some beatiful scenery.</p></blockquote>
-			</div>
-
-			<div id="photos" style="display: none;" class="section">
-				<h1>Photos</h1>
-
-				<p></p>
-
-				<ul id="photos">
-					<li><a href="#" class="smallphoto" data-enlarge="photos/1.jpg"><img src="photos/1s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/2.jpg"><img src="photos/2s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/3.jpg"><img src="photos/3s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/4.jpg"><img src="photos/4s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/5.jpg"><img src="photos/5s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/6.jpg"><img src="photos/6s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/7.jpg"><img src="photos/7s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/8.jpg"><img src="photos/8s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/9.jpg"><img src="photos/9s.jpg" alt="" /></a></li>
-					<li><a href="#" class="smallphoto" data-enlarge="photos/10.jpg"><img src="photos/10s.jpg" alt="" /></a></li>
-				</ul>
-			</div>
-
-			<div id="registries" style="display: none;" class="section">
-				<h1>Registries</h1>
-
-				<p>We have created the following gift registries for those guests who would like to send gifts to us before the wedding:</p>
-				
-				<ul>
-					<li><a href="http://www.williams-sonoma.com/registry/3169058/registry-list.html" target="_blank">Williams Sonoma</a></li>
-					<li><a href="http://www.honeyfund.com/wedding/marisaandphil" target="_blank">HoneyFund.com</a></li>
-				</ul>
-			</div>
-
-			<div id="rsvp" style="display: none;" class="section">
-				<h1>RSVP</h1>
-
-				<p>A response is requested by 29<sup>th</sup> June.</p>
-                
-                <form id="emf-form" target="_self" enctype="multipart/form-data" method="post" action="http://www.emailmeform.com/builder/form/Xh7s1O59wN0b">
-                  <h4>Name</h4>
-                  <p><input id="element_2" name="element_2" value="" size="20" class="validate[required]" type="text" />
-                  <input id="element_3" name="element_3" value="" size="20" class="validate[required]" type="text" /></p>
-                  <h4>Will you be attending the ceremony?</h4>
-                  <p><input id="element_5_0" name="element_5" value="Wouldn't miss it for the world!" class="validate[required]" type="radio" /><font size="2" color="#000000">Wouldn't miss it for the world!</font>
-                  <br/><input id="element_5_1" name="element_5" value="Will be celebrating from afar" class="validate[required]" type="radio" /><font size="2" color="#000000">Will be celebrating from afar</font></p>
-                  <h4>Number of guests attending</h4>
-                  <input id="element_6" name="element_6" class="validate[optional,custom[onlyNumber]]" value="" size="5" type="text" />
-                  <h4>Dietary Requirements</h4>
-                  <p><input id="element_7_0" name="element_7" value="None" class="validate[required]" checked="checked" type="radio" /><font size="2" color="#000000">&nbsp;None&nbsp;</font>
-                  <br/><input id="element_7_1" name="element_7" value="No Dairy" class="validate[required]" type="radio" /><font size="2" color="#000000">&nbsp;No Dairy&nbsp;</font>
-                  <br/><input id="element_7_2" name="element_7" value="Vegetarian" class="validate[required]" type="radio" /><font size="2" color="#000000">&nbsp;Vegetarian&nbsp;</font>
-                  <br/><input id="element_7_3" name="element_7" value="Other" class="validate[required]" type="radio" /><font size="2" color="#000000">&nbsp;Other&nbsp;</font>
-                  <br/><input type="text" class="validate[required]" onclick="document.getElementById('element_7_3').checked = 'checked';" 
-					onchange="document.getElementById('element_7_3').value = this.value;" 
-					id="element_7_other" name="element_7_other" value=""/></p>
-                  <h4>Which events would you like to attend?</h4>
-                  <p><input id="element_9_0" name="element_9[]" value="London Sightseeing (Thursday 18th, 7pm)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_0">London Sightseeing (Thursday 18th, 7pm)</label>
-                  <br/><input id="element_9_1" name="element_9[]" value="Cambridge Pub Crawl (Wednesday 17th, 10am)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_1">Cambridge Pub Crawl (Wednesday 17th, 10am)</label>
-                  <br/><input id="element_9_2" name="element_9[]" value="Punting (Friday 19th, Noon)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_2">Punting (Friday 19th, Noon)</label></p>
-                  <h4>Other Comments</h4>
-                  <textarea id="element_10" name="element_10" cols="45" rows="5" class="validate[optional]"></textarea>
-                  <input name="element_counts" value="11" type="hidden" />
-                  <input name="embed" value="forms" type="hidden" />
-                  <p><input value="RSVP" type="submit" /></p>
-               </form>
-               <div style="margin-top:18px;text-align:center">
-                 <script type="text/javascript">
-                 //<![CDATA[
-                 generate_css_for_emf_ad();
-                 //]]>
-                 </script>
-                 <div id='emf_advertisement'>
-                   <font size="2" color="#000000">Powered by</font><span style="position: relative; padding-left: 3px; bottom: -5px;"><img src=
-                   "http://www.emailmeform.com/builder/images/footer-logo.png" /></span><font size="2" color="#000000">EMF</font> <a style="text-decoration:none;" href="http://www.emailmeform.com/"
-                   target="_blank"><font size="2" color="#000000">Survey Creator</font></a>
-                 </div>
-                 <div>
-                   <a style="line-height:20px;font-size:70%;text-decoration:none;" href="http://www.emailmeform.com/report-abuse.html?http://www.emailmeform.com/builder/form/Xh7s1O59wN0b" target=
-                   "_blank"><font size="2" color="#000000">Report Abuse</font></a>
-                 </div>
-               </div>
-			</div>
-		</div>
-
+		<p><em>Marisa & Phil</em></p>
 	</div>
-</div>
 
+	<div id="events" style="display: none;" class="section">
+		<h1>Events</h1>
 
-<div id="glassPane"></div>
+		<h2>London Sightseeing</h2>
 
-<div id="overlayWrapper">
-    <div id="overlay">
-        <div class="overlayBorder" id="rotate-3">
-            <span class="overlayImagePlaceholder" />
-        </div>
-        <div class="overlayBorder" id="rotate0">
-            <span class="overlayImagePlaceholder" />
-        </div>
-        <div class="overlayBorder" id="rotate3">
-            <img id="overlayImage" src="" />
-        </div>
-    </div>
+		<blockquote>
+		<h3>Wednesday, July 17, 2013</h3>
+
+		<p>10:00AM -</p>
+		
+		<p>We will be walking around London and visiting some of our favourite sights including Big Ben, Trafalgar Square, Picadilly Circus, Buckingham Palace and Covent Garden.
+		</p>
+		</blockquote>
+
+		<h2>Cambridge Pub Crawl</h2>
+		
+		<blockquote>
+		<h3>Thursday, July 18, 2013</h3>
+
+		<p>7:00PM -</p>
+		
+		<p>We will be visiting some of our favourite pubs in Cambridge. For those of you would like to get started early, we have posted a list of our favourite pubs on Google Maps <a href="http://maps.google.com/maps/ms?ie=UTF&msa=0&msid=216864241354524736059.0004c3641f9997e72e9b6" tagrt="_blank">here</a>.</p>
+		</blockquote>
+
+		<h2>Punting</h2>
+
+		<blockquote>
+		<h3>Friday, July 19, 2013</h3>
+
+		<p>Noon - 2:00PM</p>
+
+		<p>Punting on the river Cam. See the backs of the colleges and enjoy refreshments.</p>
+	
+		<p>Meet by the river off of Mill Ln.</p> 
+		</blockquote>
+	
+		<h2>Wedding Ceremony and Reception</h2>
+	
+		<blockquote>
+		<h3>Saturday, July 20, 2013</h3>
+	
+		<p>3:30PM - 11:30PM</p>
+	
+		<p>The entire wedding will take place at Pembroke College. The ceremony begins at 3:30PM, followed by cocktails, and the reception.</p>
+		</blockquote>
+	</div>
+
+	<div id="accomodation" style="display: none;" class="section">
+		<h1>Accomodation</h1>
+
+		<h2>Pembroke College</h2>
+
+		<blockquote>
+		<p>There are two rooms at the college that have been reserved for guests. One room has four beds, the other six. There is a shared bathroom in the hall. If you are interested in rooming here please contact the bride and groom.</p>
+		</blockquote>
+	
+		<h2>Regent Hotel</h2>
+	
+		<blockquote>
+		<p>Centrally located the Hotel is an easy stroll to all the city's attractions, and overlooks the famous Parkers Piece. It is about a 10min walk to the wedding location. Standard rooms are about 100 pounds per night.</p>
+	
+		<p><strong>Tel</strong>: (+44) (0) 1223351470</p>
+
+		<p><strong>Web</strong>: <a href="http://www.regenthotel.co.uk/" target="_blank">regenthotel.co.uk</a></p>
+	
+		</blockquote>
+
+		<h2>Hotel du Vin</h2>
+	
+		<blockquote>
+		<p>A luxury hotel just down the street from the wedding location.</p>
+	
+		<p><strong>Tel</strong>: (+44) (0) 223227330</p>
+
+		<p><strong>Web</strong>: <a href="http://www.hotelduvin.com/hotels/cambridge/cambridge.aspx" target="_blank">hotelduvin.com</a></p>
+	
+		</blockquote>
+	</div>
+
+	<div id="travel" style="display: none;" class="section">
+		<h1>Travel</h1>
+
+		<h2>By Plane</h2>
+
+		<blockquote>
+		<p>For those of you travelling from the States, we are currently looking into a group discount. In the meantime, a great webite for travel deals from the States to the UK is <a href="http://www.skyscanner.com/" target="_blank">skyscanner.com</a></p>
+		</blockquote>
+	
+		<h2>By Train</h2>
+	
+		<blockquote>
+		<p>The UK has an extensive rail system. Trains depart from London to Cambridge nearly every hour. There are also excellent connections from Scotland & the North via Peterborough, and regional services from Birmingham & the Midlands, East Anglia & the Northwest.You can check train times and make reservations at the <a href="http://www.nationalrail.co.uk/" target="_blank">National Rail website</a>.</p>
+		</blockquote>
+
+		<h2>By Car</h2>
+	
+		<blockquote>
+		<p>From the South & from London, Cambridge is a short trip up the M11 motorway. From the north, the A1 and M1 link to the A14 dual carriageway straight to the city, and from the east and west, the A14 again takes you to Cambridge.</p>
+	
+		<p>The closest car park to the wedding location is the <a href="http://www.cambridge.gov.uk/ccm/content/transport-and-streets/car-parks/grand-arcade-car-park.en" target="_blank">Grand Arcade</a>.</p>
+	
+		</blockquote>
+	</div>
+
+	<div id="location" style="display: none;" class="section">
+		<h1>Location</h1>
+
+		<p>Cambridge is a beautiful City and there is plenty to see and do. Some of our favorite activities and places to visit are listed below. For more information about the City, we suggest you visit te <a href="http://www.visitcambridge.org/" target="_blank">Visit Cambridge</a> website.</p>
+
+		<h2>Punting</h2><blockquote>
+
+		<p>An absolute must in Cambridge, you will see the famous Cambridge College "Backs" while strolling down the river on a traditional punt.</p></blockquote>
+
+		<h2>Tour of the Colleges</h2>
+
+		<blockquote><p>There are 31 colleges in Cambridge, each is worth a visit, but if you are low on time then Kings, Trinity, and St. John's are the most popular.</p></blockquote>
+
+		<h2>Visit a Local Pub</h2>
+
+		<blockquote><p>Our favorites are the Mill, the Green Man, and the Green Dragon, also popular are the Anchor and the Eagle.</p></blockquote>
+
+		<h2>Fitzwilliam Museum</h2>
+
+		<blockquote><p>The most famous museum in Cambridge offers over half a million works of art for visitors to view.</p></blockquote>
+
+		<h2>Botanical Gardens</h2>
+
+		<blockquote><p>This garden is 40-acres and displays over 8,000 plant species.</p></blockquote>
+
+		<h2>Afternoon Tea</h2>
+
+		<blockquote><p>A traditional afternoon tea consists of a pot of tea, scones, sandwiches, and cakes. Our favorite places for tea are Brown's and the Orchard.</p></blockquote>
+
+		<h2>Walk to Grantchester</h2>
+
+		<blockquote><p>A trip to nearby Grantchester is a great activity since the walk there is only about 20 min and takes you along some beatiful scenery.</p></blockquote>
+	</div>
+
+	<div id="registries" style="display: none;" class="section">
+		<h1>Registries</h1>
+
+		<p>We have created the following gift registries for those guests who would like to send gifts to us before the wedding:</p>
+		
+		<ul>
+			<li><a href="http://www.williams-sonoma.com/registry/3169058/registry-list.html" target="_blank">Williams Sonoma</a></li>
+			<li><a href="http://www.honeyfund.com/wedding/marisaandphil" target="_blank">HoneyFund.com</a></li>
+		</ul>
+	</div>
+
+	<div id="rsvp" style="display: none;" class="section">
+		<h1>RSVP</h1>
+
+		<p>A response is requested by 29<sup>th</sup> June.</p>
+        
+        <form id="emf-form" target="_self" enctype="multipart/form-data" method="post" action="http://www.emailmeform.com/builder/form/Xh7s1O59wN0b">
+          <h4>Name</h4>
+          <p><input id="element_2" name="element_2" value="" size="20" class="validate[required]" type="text" />
+          <input id="element_3" name="element_3" value="" size="20" class="validate[required]" type="text" /></p>
+          <h4>Will you be attending the ceremony?</h4>
+          <p><input id="element_5_0" name="element_5" value="Wouldn't miss it for the world!" class="validate[required]" type="radio" /><font>Wouldn't miss it for the world!</font>
+          <br/><input id="element_5_1" name="element_5" value="Will be celebrating from afar" class="validate[required]" type="radio" /><font>Will be celebrating from afar</font></p>
+          <h4>Number of guests attending</h4>
+          <input id="element_6" name="element_6" class="validate[optional,custom[onlyNumber]]" value="" size="5" type="text" />
+          <h4>Dietary Requirements</h4>
+          <p><input id="element_7_0" name="element_7" value="None" class="validate[required]" checked="checked" type="radio" /><font>&nbsp;None&nbsp;</font>
+          <br/><input id="element_7_1" name="element_7" value="No Dairy" class="validate[required]" type="radio" /><font>&nbsp;No Dairy&nbsp;</font>
+          <br/><input id="element_7_2" name="element_7" value="Vegetarian" class="validate[required]" type="radio" /><font>&nbsp;Vegetarian&nbsp;</font>
+          <br/><input id="element_7_3" name="element_7" value="Other" class="validate[required]" type="radio" /><font>&nbsp;Other&nbsp;</font>
+          <br/><input type="text" class="validate[required]" onclick="document.getElementById('element_7_3').checked = 'checked';" 
+			onchange="document.getElementById('element_7_3').value = this.value;" 
+			id="element_7_other" name="element_7_other" value=""/></p>
+          <h4>Which events would you like to attend?</h4>
+		  <p><input id="element_9_1" name="element_9[]" value="Cambridge Pub Crawl (Wednesday 17th, 10am)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_1">Cambridge Pub Crawl (Wednesday 17th, 10am)</label>
+          <br/><input id="element_9_0" name="element_9[]" value="London Sightseeing (Thursday 18th, 7pm)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_0">London Sightseeing (Thursday 18th, 7pm)</label>
+          <br/><input id="element_9_2" name="element_9[]" value="Punting (Friday 19th, Noon)" class="validate[optional]"  type="checkbox" /><label class="padleft-w5" for="element_9_2">Punting (Friday 19th, Noon)</label></p>
+          <h4>Other Comments</h4>
+          <textarea id="element_10" name="element_10" cols="60" rows="7" class="validate[optional]"></textarea>
+          <input name="element_counts" value="11" type="hidden" />
+          <input name="embed" value="forms" type="hidden" />
+          <p><input value="RSVP" type="submit" /></p>
+       </form>
+       <div style="margin-top:18px;text-align:center">
+         <script type="text/javascript">
+         //<![CDATA[
+         generate_css_for_emf_ad();
+         //]]>
+         </script>
+         <div id='emf_advertisement'>
+           <font>Powered by</font><span style="position: relative; padding-left: 3px; bottom: -5px;"><img src=
+           "http://www.emailmeform.com/builder/images/footer-logo.png" /></span><font>EMF</font> <a style="text-decoration:none;" href="http://www.emailmeform.com/"
+           target="_blank"><font>Survey Creator</font></a>
+         </div>
+         <div>
+           <a style="line-height:20px;font-size:70%;text-decoration:none;" href="http://www.emailmeform.com/report-abuse.html?http://www.emailmeform.com/builder/form/Xh7s1O59wN0b" target=
+           "_blank"><font>Report Abuse</font></a>
+         </div>
+       </div>
+	</div>
 </div>
 
 </body>
